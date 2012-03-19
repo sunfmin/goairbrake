@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notice version="2.2">
+  <api-key>a247154ec9993ed53448243555e9479f</api-key>
+  <notifier>
+    <name>Airbrake Notifier</name>
+    <version>3.0.9</version>
+    <url>http://airbrake.io</url>
+  </notifier>
+  <error>
+    <class>RuntimeError</class>
+    <message>RuntimeError: Rack down</message>
+    <backtrace>
+      <line number="10" file="test.rb" method="block (2 levels) in &lt;main&gt;"/>
+      <line number="59" file="[GEM_ROOT]/gems/rack-1.4.1/lib/rack/handler/webrick.rb" method="service"/>
+      <line number="138" file="/usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb" method="service"/>
+      <line number="94" file="/usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb" method="run"/>
+      <line number="191" file="/usr/local/Cellar/ruby/1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb" method="block in start_thread"/>
+    </backtrace>
+  </error>
+  <request>
+    <url>http://localhost:9292/</url>
+    <component></component>
+    <action></action>
+    <cgi-data>
+      <var key="GATEWAY_INTERFACE">CGI/1.1</var>
+      <var key="PATH_INFO">/</var>
+      <var key="QUERY_STRING"></var>
+      <var key="REMOTE_ADDR">127.0.0.1</var>
+      <var key="REMOTE_HOST">localhost</var>
+      <var key="REQUEST_METHOD">GET</var>
+      <var key="REQUEST_URI">http://localhost:9292/</var>
+      <var key="SCRIPT_NAME"></var>
+      <var key="SERVER_NAME">localhost</var>
+      <var key="SERVER_PORT">9292</var>
+      <var key="SERVER_PROTOCOL">HTTP/1.1</var>
+      <var key="SERVER_SOFTWARE">WEBrick/1.3.1 (Ruby/1.9.3/2011-10-30)</var>
+      <var key="HTTP_HOST">localhost:9292</var>
+      <var key="HTTP_CONNECTION">keep-alive</var>
+      <var key="HTTP_CACHE_CONTROL">max-age=0</var>
+      <var key="HTTP_USER_AGENT">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.79 Safari/535.11</var>
+      <var key="HTTP_ACCEPT">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</var>
+      <var key="HTTP_ACCEPT_ENCODING">gzip,deflate,sdch</var>
+      <var key="HTTP_ACCEPT_LANGUAGE">en-US,en;q=0.8</var>
+      <var key="HTTP_ACCEPT_CHARSET">ISO-8859-1,utf-8;q=0.7,*;q=0.3</var>
+      <var key="rack.version">["1", "1"]</var>
+      <var key="rack.input">#&lt;StringIO:0x007fae78846650&gt;</var>
+      <var key="rack.errors">#&lt;IO:0x007fae7886fb18&gt;</var>
+      <var key="rack.multithread">true</var>
+      <var key="rack.multiprocess">false</var>
+      <var key="rack.run_once">false</var>
+      <var key="rack.url_scheme">http</var>
+      <var key="HTTP_VERSION">HTTP/1.1</var>
+      <var key="REQUEST_PATH">/</var>
+      <var key="rack.request.query_string"></var>
+      <var key="rack.request.query_hash">
+    </var>
+  </cgi-data>
+</request>
+  <server-environment>
+    <project-root></project-root>
+    <environment-name></environment-name>
+    <hostname>FelixMBP.local</hostname>
+  </server-environment>
+</notice>
+
