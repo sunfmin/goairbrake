@@ -9,8 +9,23 @@ import (
 
 func TestSendNotice(t *testing.T) {
 	ApiKey = "a247154ec9993ed53448243555e9479f"
-	ts := httptest.NewServer(Watch(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		panic("ahh... no!!!")
+	ts := httptest.NewServer(WatchHandlerFunc(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		panic("ahh... no!!! HandlerFunc")
+	})))
+	defer ts.Close()
+
+	SentNotice = make(chan *Noticed)
+	http.Get(ts.URL)
+	nd := <-SentNotice
+	if nd.Url == "" {
+		t.Errorf("didn't create airbrake notice, %+v", nd)
+	}
+
+}
+func TestSendNoticeHandler(t *testing.T) {
+	ApiKey = "a247154ec9993ed53448243555e9479f"
+	ts := httptest.NewServer(WatchHandler(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		panic("ahh... no!!! Handler")
 	})))
 	defer ts.Close()
 
